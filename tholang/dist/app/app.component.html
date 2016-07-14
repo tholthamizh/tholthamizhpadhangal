@@ -1,0 +1,14 @@
+
+<h1>
+  {{title}}
+</h1>
+<!--<ul class="nav nav-tabs">
+  			<li class="active"><a [routerLink]="['/words']" data-toggle="tab" routerLinkActive="active">Words</a></li>
+  			<li><a [routerLink]="['/random']" routerLinkActive="active" data-toggle="tab" >Random</a> </li>  			
+</ul>-->
+<ul class="nav nav-tabs">
+  	<li class="active"><a data-toggle="tab" (click)="routeToWords()">சொற்கள்</a></li>
+  	<li><a data-toggle="tab" (click)="routeToRandom()">தொடர்புகொள்ள</a> </li>  			
+</ul>
+
+<router-outlet></router-outlet>
