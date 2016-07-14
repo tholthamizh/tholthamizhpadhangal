@@ -1,1 +1,0 @@
-{"version":3,"file":"word-list-type.js","sourceRoot":"","sources":["../Users/ssaravanamuthu/tholang/tholang/tmp/broccoli_type_script_compiler-input_base_path-oPw6q7zB.tmp/0/src/app/word-list-type.ts"],"names":[],"mappings":";AAAA;IAAA;IAEA,CAAC;IAAD,mBAAC;AAAD,CAAC,AAFD,IAEC;AAFY,oBAAY,eAExB,CAAA","sourcesContent":["export class WordListType {\n\twords: String[];\n}"]}
