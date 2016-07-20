@@ -1,0 +1,12 @@
+<div><p [class]="'ctitle'">{{title}}</p></div>
+<tr class="searchbar"><td style="width:100%"></td><td><span class="search-text">Search</span><input [(ngModel)]="qstring" (keyup)="qstringChanged()"></td></tr>
+<br/><br/>
+<table>
+	<tbody>
+		<tr *ngFor="let itemArray of displayList">		
+			<td *ngFor="let item of itemArray">			
+			<span (click)="itemSelected(item)">{{item}}</span>
+			</td>
+		</tr>
+	</tbody>
+</table>

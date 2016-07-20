@@ -1,35 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { WordListType } from './word-list-type'
-import {WordService} from './words.service'
+import { WordListType } from './word-list-type';
+import {WordService} from './words.service';
+import {GridList} from './gridlist/gridlist.component';
 	 
 
 @Component({
   selector: 'wordlist', 
   template:`
   	<div class="row">
-  		<div class="col-md-2">
-	  		<br/>
-	  		<button type="button" class="btn btn-primary" (click)="shuffle()">குலுக்கு</button>
-	  		<br/><br/>
-	  		<button type="button" id="shuffle" class="btn btn-primary" (click)="randomSel()">நிரைமுறை இன்றி எடு </button>
-	  		<br/>
-	  	</div>
-	  	<div class="col-md-10">
+  		<div class="col-md-10">
 	  		<h4>{{selectedWord}}</h4>
 	  		<p [innerHTML]="desc"></p>
 	  	</div>
   	</div>
-  	<table class='table table-hover'>
-  		<thead><tr><td>பதம்({{wordList.length}})</td></tr></thead><tbody>
-  		<tbody>  		
-  			<tr *ngFor="let wordl of words">
-  				<td *ngFor="let word of wordl.words" (click)="getWordDetail(word)">{{word}}</td>
-  			</tr>
-  		</tbody>
-  	</table>
+  	<gridlist [title]="'பதங்கள்'" [inList]="wordList" [columns]="6" (onselect)="getWordDetail($event)">
 
-  `
+    </gridlist>
+
+  `,
+  directives: [GridList]
 })
 
 export class WordlistComponent extends OnInit{
