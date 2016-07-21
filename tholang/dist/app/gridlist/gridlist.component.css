@@ -1,39 +1,18 @@
-table {
-	text-align: left;
-}
-
-td {
-	padding: 2 2 2 2;
-}
-
-table > tbody > tr > td > span:hover{
+ttable > tbody > tr > td > span:hover{
 	background-color: #e6ffe6;
 	cursor: hand;	
 }
 
 table > tbody > tr > td > span {
-	padding: 20 15 20 15 !important;	
-	border-radius: 10px !important;
-	font-size: 20px;
+	padding: 2 15 2 15;	
+	border-radius: 10px;
 }
 
-table tr td {
-	border-style: solid ;
-	border-width: 10px;
-	border-color: white;
+.search-text{
+	padding-right: 15px;
 }
 
-.ctitle {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.search-text {
-	font-size: 14px;
-	font-style: italic;
-	padding-right: 10px;
-}
-
-.searchbar {
-	background-color: #e6e6ff;
+.zero-border{
+	border-width: 0px;
+	border-radius: 25px;
 }

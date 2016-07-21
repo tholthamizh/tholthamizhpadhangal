@@ -1,11 +1,11 @@
 <div><p [class]="'ctitle'">{{title}}</p></div>
-<tr class="searchbar"><td style="width:100%"></td><td><span class="search-text">Search</span><input [(ngModel)]="qstring" (keyup)="qstringChanged()"></td></tr>
+<tr class="searchbar"><td style="width:100%"></td><td><span class="search-text">தேடு</span><input [(ngModel)]="qstring" (keyup)="qstringChanged()"></td></tr>
 <br/><br/>
-<table>
+<table class="table">
 	<tbody>
 		<tr *ngFor="let itemArray of displayList">		
 			<td *ngFor="let item of itemArray">			
-			<span (click)="itemSelected(item)">{{item}}</span>
+			<button class="btn btn-default zero-border" (click)="itemSelected(item)">{{item}}</button>
 			</td>
 		</tr>
 	</tbody>

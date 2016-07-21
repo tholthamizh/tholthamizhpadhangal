@@ -12,11 +12,13 @@ import {GridList} from './gridlist/gridlist.component';
   		<div class="col-md-10">
 	  		<h4>{{selectedWord}}</h4>
 	  		<p [innerHTML]="desc"></p>
-	  	</div>
-  	</div>
-  	<gridlist [title]="'பதங்கள்'" [inList]="wordList" [columns]="6" (onselect)="getWordDetail($event)">
-
-    </gridlist>
+	  	</div>      
+  	</div><hr/>
+    <div class="row">
+  	   <div class="col-md-12">
+       <gridlist [title]="'பதங்கள்'" [inList]="wordList" [columns]="6" (onselect)="getWordDetail($event)"></gridlist>
+       </div>
+    </div>
 
   `,
   directives: [GridList]
