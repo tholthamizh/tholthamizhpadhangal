@@ -1,5 +1,9 @@
 <div><p [class]="'ctitle'">{{title}}</p></div>
-<tr class="searchbar"><td style="width:100%"></td><td><span class="search-text">தேடு</span><input [(ngModel)]="qstring" (keyup)="qstringChanged()"></td></tr>
+<tr class="searchbar">
+	<td><button (click)="selectRandom()" class="btn btn-default">Select Random</button></td>
+	<td><button  class="btn btn-default" (click)="shuffleList()">Shuffle</button></td>
+	<td style="width:100%"></td>
+	<td><span class="search-text">Search</span><input [(ngModel)]="qstring" (keyup)="qstringChanged()" placeholder="Search"></td></tr>
 <br/><br/>
 <table class="table">
 	<tbody>
