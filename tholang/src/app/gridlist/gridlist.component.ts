@@ -21,6 +21,8 @@ export class GridList extends OnInit implements OnChanges{
 	
 	qstring = "";
 
+	wcount = 0;
+
 
 	displayList:String[][];
 
@@ -38,6 +40,7 @@ export class GridList extends OnInit implements OnChanges{
 				return oItem.indexOf(qs)!==-1;
 			});
 		}
+		this.wcount = actualList.length;
 		if(shuffle){
 			actualList = this.shuffleArray(actualList);
 		}
