@@ -28,12 +28,7 @@ export class GridList extends OnInit implements OnChanges{
 		this.populateDisplayList();
 	}
 
-	lol(){
-		console.log("lol");
-	}
-
 	populateDisplayList(shuffle:Boolean = false){
-		console.log(shuffle);
 		this.displayList = [];
 		var currentList = [];
 		var actualList = this.inList;
@@ -86,7 +81,6 @@ export class GridList extends OnInit implements OnChanges{
 	}
 
   	qstringChanged(){
-  		console.log("Changes");
   		this.populateDisplayList();
   	}
 
