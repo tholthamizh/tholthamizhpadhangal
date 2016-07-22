@@ -28,7 +28,12 @@ export class GridList extends OnInit implements OnChanges{
 		this.populateDisplayList();
 	}
 
-	populateDisplayList(){
+	lol(){
+		console.log("lol");
+	}
+
+	populateDisplayList(shuffle:Boolean = false){
+		console.log(shuffle);
 		this.displayList = [];
 		var currentList = [];
 		var actualList = this.inList;
@@ -37,6 +42,9 @@ export class GridList extends OnInit implements OnChanges{
 			actualList = this.inList.filter(function(oItem){
 				return oItem.indexOf(qs)!==-1;
 			});
+		}
+		if(shuffle){
+			actualList = this.shuffleArray(actualList);
 		}
 		for(let item of actualList){
 			if(currentList.length < this.columns){
@@ -58,6 +66,25 @@ export class GridList extends OnInit implements OnChanges{
     	}
   	}
 
+  	shuffleArray(array) {
+	  var currentIndex = array.length, temporaryValue, randomIndex;
+
+	  // While there remain elements to shuffle...
+	  while (0 !== currentIndex) {
+
+	    // Pick a remaining element...
+	    randomIndex = Math.floor(Math.random() * currentIndex);
+	    currentIndex -= 1;
+
+	    // And swap it with the current element.
+	    temporaryValue = array[currentIndex];
+	    array[currentIndex] = array[randomIndex];
+	    array[randomIndex] = temporaryValue;
+	  }
+
+	  return array;
+	}
+
   	qstringChanged(){
   		console.log("Changes");
   		this.populateDisplayList();
@@ -65,5 +92,21 @@ export class GridList extends OnInit implements OnChanges{
 
   	itemSelected(i){
   		this.onselect.emit(i);
+  	}
+
+  	selectRandom(){
+  		var actualList = this.inList;
+		if(this.qstring!==""){
+			var qs = this.qstring;
+			actualList = this.inList.filter(function(oItem){
+				return oItem.indexOf(qs)!==-1;
+			});
+		}
+		var randIndex = Math.floor(Math.random() * actualList.length);
+		this.itemSelected(actualList[randIndex]);
+  	}
+
+  	shuffleList(){
+  		this.populateDisplayList(true);
   	}
 }
