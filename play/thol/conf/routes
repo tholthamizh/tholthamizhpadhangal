@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET		/api/words			controllers.Assets.at(path="/public/data", file = "words.json")		
+GET		/api/words/:word 	controllers.Assets.at(path="/public/data/words", word:String)				
+
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /*file               controllers.Assets.at(path="/public", file: String)
+GET		/					 controllers.Assets.at(path="/public", file = "index.html")

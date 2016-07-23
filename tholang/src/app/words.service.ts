@@ -9,11 +9,11 @@ export class WordService{
 	constructor(private http: Http) { }
 
 	getWordList(){
-		return this.http.get('data/words.json').map(this.somefun);		 
+		return this.http.get('api/words').map(this.somefun);		 
 	}	
 
 	getWordDesc(word){
-		return this.http.get('data/words/'+word+'.json').map(this.somefun);
+		return this.http.get('api/words/'+encodeURI(encodeURI(word))+'.json').map(this.somefun);
 	}
 
 	somefun(x){

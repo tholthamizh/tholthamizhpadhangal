@@ -1,0 +1,16 @@
+<div><p [class]="'ctitle'">{{title}} ({{wcount}})</p></div>
+<tr class="searchbar">
+	<td><button (click)="selectRandom()" class="btn btn-default">Select Random</button></td>
+	<td><button  class="btn btn-default" (click)="shuffleList()">Shuffle</button></td>
+	<td style="width:100%"></td>
+	<td><span class="search-text">Search</span><input [(ngModel)]="qstring" (keyup)="qstringChanged()" placeholder="Search"></td></tr>
+<br/><br/>
+<table class="table">
+	<tbody>
+		<tr *ngFor="let itemArray of displayList">		
+			<td *ngFor="let item of itemArray">			
+			<button class="btn btn-default zero-border" (click)="itemSelected(item)">{{item}}</button>
+			</td>
+		</tr>
+	</tbody>
+</table>

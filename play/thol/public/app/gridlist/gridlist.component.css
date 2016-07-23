@@ -1,0 +1,18 @@
+ttable > tbody > tr > td > span:hover{
+	background-color: #e6ffe6;
+	cursor: hand;	
+}
+
+table > tbody > tr > td > span {
+	padding: 2 15 2 15;	
+	border-radius: 10px;
+}
+
+.search-text{
+	padding-right: 15px;
+}
+
+.zero-border{
+	border-width: 0px;
+	border-radius: 25px;
+}
