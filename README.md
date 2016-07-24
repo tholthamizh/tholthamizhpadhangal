@@ -1,6 +1,6 @@
 # தொல்  தமிழ்ப் பதங்கள் 
 
-##Develeoper Setup
+##Developer Setup
 ### Dependencies
 1. Git
 2. sbt (http://www.scala-sbt.org/)
