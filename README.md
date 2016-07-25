@@ -24,7 +24,8 @@
 * Start UI
 ```
 >> cd {REPO_ROOT}/tholang
->> ng start
+>> npm install
+>> ng serve
 ```
 
 * Local Build
