@@ -37,7 +37,7 @@ The server starts at port 9000.
 Hit localhost:9000 from you browser. The code compiles.
 
 
-##Dployable Build
+##Deployable Build
 
 *Build UI
 ```
