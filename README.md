@@ -37,3 +37,17 @@ The server starts at port 9000.
 Hit localhost:9000 from you browser. The code compiles.
 
 
+##Dployable Build
+
+*Build UI
+```
+>> cd {REPO_ROOT}/tholang
+>> ng build -prod
+```
+
+*Build Server
+```
+>> cd {REPO_ROOT}/play/thol
+>> sbt
+[thol] dist
+```
