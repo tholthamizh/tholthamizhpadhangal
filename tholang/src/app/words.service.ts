@@ -13,7 +13,7 @@ export class WordService{
 	}	
 
 	getWordDesc(word){
-		return this.http.get('api/words/'+encodeURI(encodeURI(word))+'.json').map(this.somefun);
+		return this.http.get('api/words/'+encodeURI(encodeURI(word))).map(this.somefun);
 	}
 
 	somefun(x){

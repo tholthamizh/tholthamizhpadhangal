@@ -2,8 +2,11 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET		/api/words			controllers.Assets.at(path="/public/data", file = "words.json")		
-GET		/api/words/:word 	controllers.Assets.at(path="/public/data/words", word:String)				
+GET		/					 controllers.Assets.at(path="/public", file = "index.html")
+
+
+GET		/api/words			controllers.WordsController.words		
+GET		/api/words/:word 	controllers.WordsController.word(word)				
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
@@ -12,4 +15,3 @@ GET     /message                    controllers.AsyncController.message
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /*file               controllers.Assets.at(path="/public", file: String)
-GET		/					 controllers.Assets.at(path="/public", file = "index.html")
