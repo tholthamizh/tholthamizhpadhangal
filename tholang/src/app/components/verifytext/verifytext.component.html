@@ -3,7 +3,7 @@
 <table>
 	<tbody>
 		<tr>
-			<td><input #ans type="text"  [(ngModel)]="currentAnswer" (keyup)="answerChange(ans.value)"></td>
+			<td><input #ans type="text"  [(ngModel)]="currentAnswer" (keyup)="answerChange($event, ans.value)"></td>
 			<td><button (click)="showAnswer()">Show Answer</button></td>
 		</tr>
 	</tbody>

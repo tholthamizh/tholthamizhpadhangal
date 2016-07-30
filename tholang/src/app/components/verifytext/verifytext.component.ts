@@ -19,9 +19,20 @@ export class VerifyTextComponent {
 	@Output()
 	onComplete = new EventEmitter();
 
-	answerChange(ans:String){
-		if(ans===this.answer){
+	answerChange(event, ans: String){
+		
+		var key = event.keyCode;
+		
+		console.log("KEY " + key);
+		
+		var uselessKeys = [16, 17, 18];
+		if(uselessKeys.indexOf(key) >= 0) return;
+
+		console.log("usefulKEY " + key)
+		
+		if(ans === this.answer){
 			this.status = true;
+			console.log("Emitting event..");
 			this.onComplete.emit(true);
 		}else{
 			this.status = false;
@@ -32,6 +43,10 @@ export class VerifyTextComponent {
 		this.currentAnswer = this.answer;
 		this.status = true;
 		this.onComplete.emit(false);
+	}
+	
+	clearAnswer(){
+		this.currentAnswer = "";
 	}
 
 }

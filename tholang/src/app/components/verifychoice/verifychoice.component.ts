@@ -30,6 +30,10 @@ export class VerifyChoiceComponent{
 		}else{
 			this.status = false;
 		}
-		this.currentAnswer=selAns;
-	}	
+		this.currentAnswer = selAns;
+	}
+	
+	clearAnswer(){
+		this.currentAnswer = "";
+	}
 }
