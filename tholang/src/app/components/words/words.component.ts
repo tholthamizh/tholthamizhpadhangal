@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { WordListType } from './WordListType';
 import {WordsService} from './words.service';
-import {GridList} from '../../gridlist/gridlist.component';
+import {GridList} from '../gridlist/gridlist.component';
 	 
 
 @Component({

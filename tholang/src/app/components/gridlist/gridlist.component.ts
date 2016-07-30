@@ -2,8 +2,8 @@ import { Component, Input, OnInit, OnChanges, Output, EventEmitter, SimpleChange
 
 @Component({
 	selector: 'gridlist',
-	templateUrl: './app/gridlist/gridlist.component.html',
-	styleUrls:['./app/gridlist/gridlist.component.css']
+	templateUrl: '../app/components/gridlist/gridlist.component.html',
+	styleUrls:['./app/components/gridlist/gridlist.component.css']
 })
 
 export class GridList extends OnInit implements OnChanges{

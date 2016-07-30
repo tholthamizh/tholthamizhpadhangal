@@ -7,7 +7,7 @@ import {
 	LessonsService
 }
 from './lessons.service';
-import {GridList} from '../../gridlist/gridlist.component';
+import {GridList} from '../gridlist/gridlist.component';
 
 
 
