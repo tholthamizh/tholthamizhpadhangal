@@ -1,6 +1,8 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
 import { WordlistComponent } from './wordlist.component';
 import { RandomWordComponent } from './random-word.component';
+import { LessonsComponent } from './lesson.component';
+
 
 const routes: RouterConfig = [
   
@@ -11,6 +13,10 @@ const routes: RouterConfig = [
   {
   	path: 'contact',
   	component: RandomWordComponent
+  },
+  {
+    path: 'lessons',
+    component: LessonsComponent
   },
   {
     path: '',
