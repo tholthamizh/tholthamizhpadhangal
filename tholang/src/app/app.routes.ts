@@ -1,7 +1,7 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
 import { WordsComponent } from './components/words/words.component';
 import { RandomWordComponent } from './random-word.component';
-import { LessonsComponent } from './components/lessons/lesson.component';
+import { LessonsComponent } from './components/lessons/lessons.component';
 
 
 const routes: RouterConfig = [

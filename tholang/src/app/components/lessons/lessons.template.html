@@ -1,11 +1,12 @@
 <div class="row">
 
 	<div class="col-md-2" style="word-wrap: break-word;">
+		<h1>Lessons</h1>
 		<table class="table">
 			<tbody>
 				<tr *ngFor="let lesson of lessons">		
 					<td>			
-						<button class="btn btn-default zero-border" (click)="itemSelected(lesson)">{{lesson}}</button>
+						<button class="btn btn-default zero-border" (click)="lessonSelected(lesson)">{{lesson}}</button>
 					</td>
 				</tr>
 			</tbody>
@@ -15,16 +16,21 @@
 	<div class="col-md-10" style="word-wrap: break-word;">
 		<br/>
 		<ul class="nav nav-tabs">
-	  		<li class="active" ><a href="#content" data-toggle="tab">Content</a></li>
-	  		<li><a href="#evaluate" data-toggle="tab">Evaluate</a></li>
+	  		<li class="active"><a href="#content" data-toggle="tab" (click)="loadContent()">Content</a></li>
+	  		<li><a href="#evaluate" data-toggle="tab" (click)="loadEvaluation()">Evaluation</a></li>
 		</ul>
 
 		<div class="tab-content">
 			<div id="content" class="tab-pane active">
-	  			Content component goes here
+	  			
+				<div *ngFor="let term of lessonContent.terms">
+				<h3>{{term.term}}</h3> <h5>{{term.definition}}</h5> <p>{{term.description}}</p>
+				<br/>
+				</div>
+				
 	  		</div>
 	  		<div id="evaluate" class="tab-pane">
-	  			Evaluate component goes here
+	  			{{lessonEvaluation}}
 	  		</div>
 		</div>
 	</div>
