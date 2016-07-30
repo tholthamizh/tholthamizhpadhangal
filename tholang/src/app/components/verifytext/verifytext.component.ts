@@ -23,16 +23,11 @@ export class VerifyTextComponent {
 		
 		var key = event.keyCode;
 		
-		console.log("KEY " + key);
-		
 		var uselessKeys = [16, 17, 18];
 		if(uselessKeys.indexOf(key) >= 0) return;
-
-		console.log("usefulKEY " + key)
 		
 		if(ans === this.answer){
 			this.status = true;
-			console.log("Emitting event..");
 			this.onComplete.emit(true);
 		}else{
 			this.status = false;

@@ -42,7 +42,6 @@ export class LessonsComponent extends OnInit {
 	}
 
 	lessonSelected(lessonName){
-		console.log("Loading lesson " + lessonName);
 		this.currentLesson = lessonName;
 		this.loadContent();
 	}
