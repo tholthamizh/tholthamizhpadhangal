@@ -1,0 +1,6 @@
+<br/>
+
+	<verify-choice *ngIf="questionType === 'choice'" [choices]="selectedQuestion.choices" [answer]="selectedQuestion.answer" [question]="selectedQuestion.question">
+
+	</verify-choice>
+	<verify-text *ngIf="questionType === 'text'" [question]="selectedQuestion.question" [answer]="selectedQuestion.answer"></verify-text>

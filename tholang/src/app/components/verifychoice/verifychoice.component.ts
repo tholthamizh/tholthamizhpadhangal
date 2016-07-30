@@ -2,7 +2,7 @@ import { Component, Input, OnInit, OnChanges, Output, EventEmitter, SimpleChange
 
 @Component({
 	selector: 'verify-choice',
-	templateUrl: './app/verifychoice/verifychoice.component.html'
+	templateUrl: './app/components/verifychoice/verifychoice.component.html'
 })
 
 export class VerifyChoiceComponent{
