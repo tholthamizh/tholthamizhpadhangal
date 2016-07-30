@@ -20,7 +20,7 @@ const routes: RouterConfig = [
   },
   {
     path: '',
-    redirectTo: '/words'    
+    redirectTo: '/lessons'    
   }
 ];
 
