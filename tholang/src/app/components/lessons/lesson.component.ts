@@ -7,10 +7,14 @@ import {
 	LessonsService
 }
 from './lessons.service';
+import {GridList} from '../../gridlist/gridlist.component';
+
+
 
  @ Component({
 	selector : 'lessons',
-	templateUrl : './app/components/lessons/lessons.template.html'
+	templateUrl : './app/components/lessons/lessons.template.html',
+	directives: [GridList]
 })
 
 export class LessonsComponent extends OnInit {
@@ -29,5 +33,9 @@ export class LessonsComponent extends OnInit {
 			err => {
 				console.error(err);
 			});
+	}
+
+	itemSelected(lessonName){
+		console.log(lessonName);
 	}
 }

@@ -1,13 +1,16 @@
 <div class="row">
 
 	<div class="col-md-2" style="word-wrap: break-word;">
-		<h3>
-  			Lessons
-		</h3>
+		<table class="table">
+			<tbody>
+				<tr *ngFor="let lesson of lessons">		
+					<td>			
+						<button class="btn btn-default zero-border" (click)="itemSelected(lesson)">{{lesson}}</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
-		<div *ngFor='let a of lessons'>
-			{{a}}
-		</div>
 	</div>
 	<div class="col-md-10" style="word-wrap: break-word;">
 		<br/>
