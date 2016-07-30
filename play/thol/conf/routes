@@ -10,7 +10,7 @@ GET		/api/words/:word 	controllers.WordsController.word(word)
 
 GET     /api/lessons        controllers.LessonsController.lessons
 GET     /api/lessons/:lesson/content        controllers.LessonsController.lessonContent(lesson)
-GET     /api/lessons/:lesson/evaluate        controllers.LessonsController.lessonEvaluation(lesson)
+GET     /api/lessons/:lesson/evaluation        controllers.LessonsController.lessonEvaluation(lesson)
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
