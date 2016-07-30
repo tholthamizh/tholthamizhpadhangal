@@ -1,0 +1,17 @@
+
+<h1>
+  Lessons
+</h1>
+<div class="row">
+
+	<div class="col-md-3" style="word-wrap: break-word;">
+		
+		<div *ngFor='let a of lessons'>
+			{{a}}
+		</div>
+	</div>
+	<div class="col-md-9" style="word-wrap: break-word;">Select a lesson</div>
+</div>
+
+
+<router-outlet></router-outlet>
