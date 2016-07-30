@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { WordListType } from './word-list-type';
-import {WordService} from './words.service';
-import {GridList} from './gridlist/gridlist.component';
+import { WordListType } from './WordListType';
+import {WordsService} from './words.service';
+import {GridList} from '../../gridlist/gridlist.component';
 	 
 
 @Component({
-  selector: 'wordlist', 
+  selector: 'words', 
   template:`
   	<div class="row">
   		<div class="col-md-10">
@@ -24,8 +24,8 @@ import {GridList} from './gridlist/gridlist.component';
   directives: [GridList]
 })
 
-export class WordlistComponent extends OnInit{
-  constructor(private wordService: WordService) 
+export class WordsComponent extends OnInit{
+  constructor(private wordsService: WordsService) 
   {
   	super();
   }
@@ -37,7 +37,7 @@ export class WordlistComponent extends OnInit{
   desc='';
   
   ngOnInit(){
-    this.wordService.getWordList().subscribe(
+    this.wordsService.getWordList().subscribe(
     	data => {
     		this.wordList = data.words;
     		this.convertWordList();
@@ -55,7 +55,7 @@ export class WordlistComponent extends OnInit{
   }
   
   getWordDetail(word){
-  	this.wordService.getWordDesc(word).subscribe(
+  	this.wordsService.getWordDesc(word).subscribe(
   		data => {
   			this.selectedWord = word;
   			this.desc = data.meaning;

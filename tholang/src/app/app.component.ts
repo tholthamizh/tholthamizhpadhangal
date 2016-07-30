@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import { WordService } from './words.service';
+import { WordsService } from './components/words/words.service';
 import { LessonsService } from './components/lessons/lessons.service';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
   directives: [ROUTER_DIRECTIVES],
-  providers:[WordService, LessonsService] 
+  providers:[WordsService, LessonsService] 
 })
 export class AppComponent {
   constructor(private router: Router){}

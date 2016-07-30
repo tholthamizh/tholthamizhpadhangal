@@ -1,4 +1,9 @@
 tholang/node_modules
 tholang/.idea
+
 play/thol/thol.iml
+
+play/thol/public/app/**/*
+play/thol/public/vendor/**/*
+
 

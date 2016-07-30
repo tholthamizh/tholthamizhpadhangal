@@ -1,5 +1,5 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
-import { WordlistComponent } from './wordlist.component';
+import { WordsComponent } from './components/words/words.component';
 import { RandomWordComponent } from './random-word.component';
 import { LessonsComponent } from './components/lessons/lesson.component';
 
@@ -8,7 +8,7 @@ const routes: RouterConfig = [
   
   {
     path: 'words',
-    component: WordlistComponent
+    component: WordsComponent
   },
   {
   	path: 'contact',
