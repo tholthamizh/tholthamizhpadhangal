@@ -1,0 +1,9 @@
+<h4>{{question}}</h4>
+<h5 [style.color]="status ? 'green' : 'red'">{{currentAnswer}}</h5>
+<table>
+	<tbody>
+		<tr *ngFor="let choice of choices">
+			<td><button (click)="answerSelected(choice)">{{choice}}</button></td>
+		</tr>
+	</tbody>
+</table>

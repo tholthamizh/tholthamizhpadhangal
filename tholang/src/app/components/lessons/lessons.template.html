@@ -1,16 +1,30 @@
-
-<h1>
-  Lessons
-</h1>
 <div class="row">
 
-	<div class="col-md-3" style="word-wrap: break-word;">
-		
+	<div class="col-md-2" style="word-wrap: break-word;">
+		<h3>
+  			Lessons
+		</h3>
+
 		<div *ngFor='let a of lessons'>
 			{{a}}
 		</div>
 	</div>
-	<div class="col-md-9" style="word-wrap: break-word;">Select a lesson</div>
+	<div class="col-md-10" style="word-wrap: break-word;">
+		<br/>
+		<ul class="nav nav-tabs">
+	  		<li class="active" ><a href="#content" data-toggle="tab">Content</a></li>
+	  		<li><a href="#evaluate" data-toggle="tab">Evaluate</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="content" class="tab-pane active">
+	  			Content component goes here
+	  		</div>
+	  		<div id="evaluate" class="tab-pane">
+	  			Evaluate component goes here
+	  		</div>
+		</div>
+	</div>
 </div>
 
 
