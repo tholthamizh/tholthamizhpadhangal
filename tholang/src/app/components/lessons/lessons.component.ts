@@ -8,13 +8,12 @@ import {
 }
 from './lessons.service';
 import {GridList} from '../../gridlist/gridlist.component';
+import {EvaluationComponent} from '../evaluation/evaluation.component';
 
-
-
- @ Component({
+@Component({
 	selector : 'lessons',
 	templateUrl : './app/components/lessons/lessons.template.html',
-	directives: [GridList]
+	directives: [GridList, EvaluationComponent]
 })
 
 export class LessonsComponent extends OnInit {
@@ -68,7 +67,7 @@ export class LessonsComponent extends OnInit {
 		
 		this.lessonsService.getLessonEvaluation(this.currentLesson).subscribe(
 			data => {
-				this.lessonEvaluation = data.evaluation;
+				this.lessonEvaluation = data.questions;
 			},
 			err => {
 				console.error(err);

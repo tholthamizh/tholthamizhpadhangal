@@ -2,7 +2,7 @@ import { Component, Input, OnInit, OnChanges, Output, EventEmitter, SimpleChange
 
 @Component({
 	selector: 'verify-text',
-	templateUrl: './app/verifytext/verifytext.component.html'
+	templateUrl: './app/components/verifytext/verifytext.component.html'
 })
 
 export class VerifyTextComponent {
