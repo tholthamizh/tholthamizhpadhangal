@@ -1,10 +1,6 @@
 <br/>
 
-<div *ngIf="questionType === 'choice'">
-	<verify-choice [choices]="selectedQuestion.choices" [answer]="selectedQuestion.answer" [question]="selectedQuestion.question">
+	<verify-choice *ngIf="questionType === 'choice'" [choices]="selectedQuestion.choices" [answer]="selectedQuestion.answer" [question]="selectedQuestion.question">
 
 	</verify-choice>
-</div>
-<div *ngIf="questionType === 'text'">
-	<verify-text [question]="selectedQuestion.question" [answer]="selectedQuestion.answer"></verify-text>
-</div>
+	<verify-text *ngIf="questionType === 'text'" [question]="selectedQuestion.question" [answer]="selectedQuestion.answer"></verify-text>
