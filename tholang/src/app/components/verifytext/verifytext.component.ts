@@ -17,12 +17,12 @@ export class VerifyTextComponent {
 	status:Boolean = false;
 
 	@Output()
-	oncomplete = new EventEmitter();
+	onComplete = new EventEmitter();
 
 	answerChange(ans:String){
 		if(ans===this.answer){
 			this.status = true;
-			this.oncomplete.emit(true);
+			this.onComplete.emit(true);
 		}else{
 			this.status = false;
 		}
@@ -31,7 +31,7 @@ export class VerifyTextComponent {
 	showAnswer(){
 		this.currentAnswer = this.answer;
 		this.status = true;
-		this.oncomplete.emit(false);
+		this.onComplete.emit(false);
 	}
 
 }

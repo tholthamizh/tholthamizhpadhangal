@@ -20,12 +20,12 @@ export class VerifyChoiceComponent{
 	status = false;
 
 	@Output()
-	oncomplete = new EventEmitter();
+	onComplete = new EventEmitter();
 
 	answerSelected(selAns){
 		if(selAns === this.answer){
 			this.status = true;
-			this.oncomplete.emit(true);
+			this.onComplete.emit(true);
 
 		}else{
 			this.status = false;
