@@ -2,14 +2,19 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET		/					 controllers.Assets.at(path="/public", file = "index.html")
+GET		/					controllers.Assets.at(path="/public", file = "index.html")
 
 
 GET		/api/words			controllers.WordsController.words		
-GET		/api/words/:word 	controllers.WordsController.word(word)				
+GET		/api/words/:word 	controllers.WordsController.word(word)
+
+GET     /api/lessons        controllers.LessonsController.lessons
+GET     /api/lessons/:lesson/content        controllers.LessonsController.lessonContent(lesson)
+GET     /api/lessons/:lesson/evaluate        controllers.LessonsController.lessonEvaluation(lesson)
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
+
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
 
