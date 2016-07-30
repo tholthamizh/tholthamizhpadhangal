@@ -23,10 +23,10 @@ export class LessonsComponent extends OnInit {
 
 	ngOnInit() {
 		this.lessonsService.getLessonsList().subscribe(
-			data =  > {
+			data => {
 				this.lessons = data.lessons;
 			},
-			err =  > {
+			err => {
 				console.error(err);
 			});
 	}
