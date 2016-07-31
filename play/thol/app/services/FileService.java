@@ -10,12 +10,10 @@ import java.util.stream.Stream;
 @Singleton
 public class FileService {
     public String getFileContent(String absolutePath) throws Exception {
-        System.out.println(absolutePath);
         return new Scanner(new File(absolutePath)).useDelimiter("\\Z").next();
     }
 
     public List<String> getDirectoryContent(String absolutePath) throws Exception {
-        System.out.println(absolutePath);
         File directory = new File(absolutePath);
         List<File> subdirectories = Arrays.asList(directory.listFiles());
 

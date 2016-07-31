@@ -49,8 +49,7 @@ public class LessonsController extends Controller {
         return CompletableFuture.supplyAsync(() -> {
             try {
                 String lessonsDirectory = baseLocation + "lessons";
-                System.out.println(new File(lessonsDirectory).getAbsolutePath());
-
+                
                 List<String> lessonNames = fileService.getDirectoryContent(lessonsDirectory);
 
                 HashMap<String, List<String>> lessonsMap = new HashMap<String, List<String>>();
@@ -67,8 +66,7 @@ public class LessonsController extends Controller {
         return CompletableFuture.supplyAsync(() -> {
             try {
                 String lessonDirectory = baseLocation + "lessons" + "/" + lesson;
-                System.out.println(new File(lessonDirectory).getAbsolutePath());
-
+                
                 return Results.ok(fileService.getFileContent(lessonDirectory + "/" + "content.json"));
 
             } catch (Exception e) {
@@ -81,8 +79,7 @@ public class LessonsController extends Controller {
         return CompletableFuture.supplyAsync(() -> {
             try {
                 String lessonDirectory = baseLocation + "lessons" + "/" + lesson;
-                System.out.println(new File(lessonDirectory).getAbsolutePath());
-
+                
                 return Results.ok(fileService.getFileContent(lessonDirectory + "/" + "evaluation.json"));
 
             } catch (Exception e) {
