@@ -44,12 +44,16 @@ export class LessonsComponent extends OnInit {
 
 	lessonSelected(lessonName){
 		this.currentLesson = lessonName;
-		this.loadContent();
+
+		if (this.currentTab === "evaluation") {
+			this.loadEvaluation();
+		} else {
+			this.loadContent();
+		}
 	}
 	
 	loadContent(){
 		
-		if(this.currentTab === "content") return;
 		this.currentTab = "content";
 		
 		this.lessonsService.getLessonContent(this.currentLesson).subscribe(
@@ -63,7 +67,6 @@ export class LessonsComponent extends OnInit {
 	
 	loadEvaluation(){
 		
-		if(this.currentTab === "evaluation") return;
 		this.currentTab = "evaluation";
 		
 		this.lessonsService.getLessonEvaluation(this.currentLesson).subscribe(
