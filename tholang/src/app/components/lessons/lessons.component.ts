@@ -14,6 +14,7 @@ import {EvaluationComponent} from '../evaluation/evaluation.component';
 @Component({
 	selector : 'lessons',
 	templateUrl : './app/components/lessons/lessons.template.html',
+	styleUrls: ['./app/components/lessons/lessons.css'],
 	directives: [GridList, EvaluationComponent]
 })
 

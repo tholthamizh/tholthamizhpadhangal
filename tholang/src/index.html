@@ -20,12 +20,8 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <div class="container">
-  <div class="starter-template">
+  <div>
   <app-root>Loading...</app-root>
-
-  
-
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -34,7 +30,6 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-  </div>
   </div>
 
 </body>

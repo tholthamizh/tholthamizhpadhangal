@@ -1,19 +1,12 @@
 <div class="row">
 
-	<div class="col-md-2" style="word-wrap: break-word;">
-		<h1>Lessons</h1>
-		<table class="table">
-			<tbody>
-				<tr *ngFor="let lesson of lessons">		
-					<td>			
-						<button class="btn btn-default zero-border" (click)="lessonSelected(lesson)">{{lesson}}</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
+	<div class="col-md-2 sidebar" style="word-wrap: break-word;">
+		<h3 class="lessonsHeader">Lessons</h3>
+		<ul class="nav nav-sidebar nav-inverse">
+            <li *ngFor="let lesson of lessons" [class.active]="currentLesson === lesson" (click)="lessonSelected(lesson)"><a href="javascript:void(0);">{{lesson}}</a></li>
+        </ul>
 	</div>
-	<div class="col-md-10" style="word-wrap: break-word;">
+	<div class="col-md-10 lessonMain" style="word-wrap: break-word;">
 		<br/>
 		<ul class="nav nav-tabs">
 	  		<li class="active"><a href="#content" data-toggle="tab" (click)="loadContent()">Content</a></li>
@@ -34,6 +27,7 @@
 	  		</div>
 		</div>
 	</div>
+	
 </div>
 
 
