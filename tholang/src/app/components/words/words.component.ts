@@ -3,12 +3,13 @@ import { Router } from '@angular/router';
 import { WordListType } from './WordListType';
 import {WordsService} from './words.service';
 import {GridList} from '../gridlist/gridlist.component';
+import {Modal} from '../modal/modal.component';
 	 
 
 @Component({
   selector: 'words', 
   templateUrl:'./app/components/words/words.component.html',
-  directives: [GridList],
+  directives: [GridList, Modal],
   styleUrls: ['./app/components/words/words.css']
 })
 
@@ -23,6 +24,7 @@ export class WordsComponent extends OnInit{
   count = 0;
   selectedWord = '';
   desc='';
+  showModal = false;
   
   ngOnInit(){
     this.wordsService.getWordList().subscribe(
@@ -39,7 +41,7 @@ export class WordsComponent extends OnInit{
 
   randomSel(){
   	var item = this.wordList[Math.floor(Math.random()*this.wordList.length)];
-  	this.getWordDetail(item);
+  	this.getWordDetail(item);    
   }
   
   getWordDetail(word){
@@ -47,6 +49,7 @@ export class WordsComponent extends OnInit{
   		data => {
   			this.selectedWord = word;
   			this.desc = data.meaning;
+        this.showModal = true;
   		},
   		err => {
   			console.error(err); 

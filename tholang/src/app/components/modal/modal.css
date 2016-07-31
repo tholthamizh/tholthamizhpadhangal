@@ -1,0 +1,14 @@
+.modal-uiblocker {
+	display: block; 
+	z-index: 110;
+
+	height: 100%; 
+	width: 100%; 
+	overflow: hidden; 
+	
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	
+	background-color: rgba(0, 0, 0, 0.7);
+}
