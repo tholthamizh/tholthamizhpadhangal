@@ -7,21 +7,9 @@ import {GridList} from '../gridlist/gridlist.component';
 
 @Component({
   selector: 'words', 
-  template:`
-  	<div class="row">
-  		<div class="col-md-10">
-	  		<h4>{{selectedWord}}</h4>
-	  		<p [innerHTML]="desc"></p>
-	  	</div>      
-  	</div><hr/>
-    <div class="row">
-  	   <div class="col-md-12">
-       <gridlist [title]="'பதங்கள்'" [inList]="wordList" [columns]="6" (onselect)="getWordDetail($event)"></gridlist>
-       </div>
-    </div>
-
-  `,
-  directives: [GridList]
+  templateUrl:'./app/components/words/words.component.html',
+  directives: [GridList],
+  styleUrls: ['./app/components/words/words.css']
 })
 
 export class WordsComponent extends OnInit{
