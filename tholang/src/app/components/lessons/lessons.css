@@ -1,16 +1,18 @@
+/* 
+* Lessons page
+*/
+.lessonsPage > .lessonMain{
+	margin-top:50px;
+}
+
 /*
  * Sidebar
  */
 
-/* Hide for mobile, show later */
-.sidebar {
-  display: none;
-}
-
-.sidebar {
+.lessonsPage > .sidebar {
   width: 250px;
   position: fixed;
-  top: 51px;
+  top: 55px;
   bottom: 0;
   left: 0;
   z-index: 1000;
