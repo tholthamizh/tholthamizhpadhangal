@@ -7,8 +7,8 @@
 <br/><br/>
 <table class="table">
 	<tbody>
-		<tr *ngFor="let itemArray of displayList">		
-			<td *ngFor="let item of itemArray">			
+		<tr *ngFor="let itemArray of displayList" style="border: none;">		
+			<td *ngFor="let item of itemArray"  style="border: none;">			
 			<button class="btn btn-default zero-border" (click)="itemSelected(item)">{{item}}</button>
 			</td>
 		</tr>
