@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(private router: Router){}
 
-  title = 'தொல் தமிழ்ப் பதங்கள்';
+  title = 'தொல் தமிழ்';
   routeToWords(){
   	this.router.navigate(['/words']);
   }
