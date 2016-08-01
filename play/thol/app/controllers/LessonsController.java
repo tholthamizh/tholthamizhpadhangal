@@ -48,14 +48,9 @@ public class LessonsController extends Controller {
     public CompletionStage<Result> lessons() {
         return CompletableFuture.supplyAsync(() -> {
             try {
-                String lessonsDirectory = baseLocation + "lessons";
+                String lessonsIndex = baseLocation + "lessons"+"/"+"index.json";
                 
-                List<String> lessonNames = fileService.getDirectoryContent(lessonsDirectory);
-
-                HashMap<String, List<String>> lessonsMap = new HashMap<String, List<String>>();
-                lessonsMap.put("lessons", lessonNames);
-
-                return Results.ok(Json.toJson(lessonsMap));
+                return Results.ok(fileService.getFileContent(lessonsIndex));
             } catch (Exception e) {
                 return Results.internalServerError("Internal Server Error");
             }

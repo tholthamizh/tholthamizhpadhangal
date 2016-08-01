@@ -3,7 +3,7 @@
 	<div class="col-md-2 sidebar" style="word-wrap: break-word;">
 		<h3 class="lessonsHeader">Lessons</h3>
 		<ul class="nav nav-sidebar nav-inverse">
-            <li *ngFor="let lesson of lessons" [class.active]="currentLesson === lesson" (click)="lessonSelected(lesson)"><a href="javascript:void(0);">{{lesson}}</a></li>
+            <li *ngFor="let lesson of lessons" [class.active]="currentLesson === lesson.id" (click)="lessonSelected(lesson.id)"><a href="javascript:void(0);">{{lesson.name}}</a></li>
         </ul>
 	</div>
 	<div class="col-md-10 lessonMain" style="word-wrap: break-word;">
