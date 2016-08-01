@@ -35,7 +35,7 @@ export class LessonsComponent extends OnInit {
 		this.lessonsService.getLessonsList().subscribe(
 			data => {
 				this.lessons = data.lessons;
-				this.lessonSelected(this.lessons[0]);
+				this.lessonSelected(data.lessons[0].id);
 			},
 			err => {
 				console.error(err);
