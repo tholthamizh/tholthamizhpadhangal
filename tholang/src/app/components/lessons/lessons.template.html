@@ -16,7 +16,7 @@
 		<div class="tab-content">
 			<div id="content" class="tab-pane active" style="margin-bottom: 10px;">	  			
 				<div *ngFor="let term of lessonContent.terms" style="border: 1px solid #b3c6ff; border-left: 5px solid gray; border-radius: 0px 10px 0px 10px; margin-bottom: 15px;" class="col-md-11">
-				<h3>{{term.term}}</h3> <h5>{{term.definition}}</h5> <p>{{term.description}}</p>
+				<h3>{{term.term}}</h3> <h5>{{term.definition}}</h5> <p [innerHTML]="term.description"></p>
 				<br/><br/>
 				</div>
 				
