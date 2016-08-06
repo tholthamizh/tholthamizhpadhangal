@@ -11,3 +11,7 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
+
+//https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+libraryDependencies += "io.jsonwebtoken" % "jjwt" % "0.6.0"
+

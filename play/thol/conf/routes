@@ -4,6 +4,8 @@
 
 GET		/					controllers.Assets.at(path="/public", file = "index.html")
 
+POST    /api/login          controllers.LoginController.login
+GET    /api/loginTest       controllers.LoginTestController.loginTest
 
 GET		/api/words			controllers.WordsController.words		
 GET		/api/words/:word 	controllers.WordsController.word(word)
