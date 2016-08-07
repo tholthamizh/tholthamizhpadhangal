@@ -1,8 +1,10 @@
 package services;
 
-import javax.inject.*;
-import java.io.*;
-import java.util.*;
+import javax.inject.Singleton;
+import java.io.File;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

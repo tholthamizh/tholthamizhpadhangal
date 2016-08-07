@@ -1,20 +1,17 @@
 package controllers;
 
 import akka.actor.ActorSystem;
-import play.*;
-import play.libs.Json;
-import play.mvc.*;
+import play.mvc.Controller;
+import play.mvc.Result;
+import play.mvc.Results;
 import scala.concurrent.ExecutionContextExecutor;
 import services.FileService;
 
-import javax.inject.*;
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.Executor;
-
 
 
 /**
@@ -48,8 +45,8 @@ public class LessonsController extends Controller {
     public CompletionStage<Result> lessons() {
         return CompletableFuture.supplyAsync(() -> {
             try {
-                String lessonsIndex = baseLocation + "lessons"+"/"+"index.json";
-                
+                String lessonsIndex = baseLocation + "lessons" + "/" + "index.json";
+
                 return Results.ok(fileService.getFileContent(lessonsIndex));
             } catch (Exception e) {
                 return Results.internalServerError("Internal Server Error");
@@ -61,7 +58,7 @@ public class LessonsController extends Controller {
         return CompletableFuture.supplyAsync(() -> {
             try {
                 String lessonDirectory = baseLocation + "lessons" + "/" + lesson;
-                
+
                 return Results.ok(fileService.getFileContent(lessonDirectory + "/" + "content.json"));
 
             } catch (Exception e) {
@@ -74,7 +71,7 @@ public class LessonsController extends Controller {
         return CompletableFuture.supplyAsync(() -> {
             try {
                 String lessonDirectory = baseLocation + "lessons" + "/" + lesson;
-                
+
                 return Results.ok(fileService.getFileContent(lessonDirectory + "/" + "evaluation.json"));
 
             } catch (Exception e) {
